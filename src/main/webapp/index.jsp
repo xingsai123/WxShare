@@ -21,7 +21,7 @@
     type:"post",
     dataType:"json",
     data:{
-    url1:"http://www.maomi.xn--fiqs8s/getDetails/1524409397585"
+    url1:"http://www.maomiyibian.com/${projectUrl}"
     /*  opreatopn:"dd"*/
     },
     success:function(res){
@@ -54,10 +54,10 @@
         wx.ready(function () {
             <%--公共方法--%>
             var shareData = {
-                title: '${title}',
-                desc: '${description}',
-                link: '${url}',
-                imgUrl: '${headImgUrl}',
+                title: '这是我做的作品~大家一起来体验一下吧！',
+                desc: '${projectDescription}',
+                link: '$http://www.moamiyibian.com/${projectUrl}',
+                imgUrl: 'http://bj-feiyuantu.oss-cn-beijing.aliyuncs.com/creative/vcg/veer/800water/veer-120563514.jpg',
                 success: function (res) {
                     //alert('已分享');
                 },
@@ -66,10 +66,10 @@
             };
             <%--分享给朋友接口--%>
             wx.onMenuShareAppMessage({
-                title: '${title}',
-                desc: '${description}',
-                link: '${url}',
-                imgUrl: '${headImgUrl}',
+                title: '快来maomiyibian和我一起创作吧！',
+                desc: '${projectDescription}',
+                link: 'http://www.moamiyibian.com/${projectUrl}',
+                imgUrl: "http://bj-feiyuantu.oss-cn-beijing.aliyuncs.com/creative/vcg/veer/800water/veer-120563514.jpg",
                 trigger: function (res) {
                     //  alert('用户点击发送给朋友');
                 },
@@ -94,6 +94,6 @@
 </head>
 <body>
 <div>TEST</div>
-<a href="${pageContext.request.contextPath}/getWxInfo">点击测试</a>
+<%--<a href="${pageContext.request.contextPath}/getWxInfo">点击测试</a>--%>
 </body>
 </html>
